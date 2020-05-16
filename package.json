@@ -2,9 +2,9 @@
   "name": "tailwindcss-markdown",
   "version": "0.0.0-development",
   "description": "Tailwind CSS plugin to style Markdown",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "files": [
-    "dist",
+    "src",
     "README.md"
   ],
   "scripts": {
@@ -48,6 +48,7 @@
     "eslint-plugin-standard": "4.0.1",
     "husky": "4.2.5",
     "jest": "26.0.1",
+    "lodash": "4.17.15",
     "postcss": "7.0.30",
     "prettier": "2.0.5",
     "rimraf": "3.0.2",
@@ -66,7 +67,5 @@
       "pre-commit": "npm run lint && npm run test:coverage"
     }
   },
-  "dependencies": {
-    "lodash": "4.17.15"
-  }
+  "dependencies": {}
 }
