@@ -8,3 +8,5 @@
 </p>
 
 A plugin to style Markdown.
+
+`plugin: [require('tailwindcss-markdown')]`
