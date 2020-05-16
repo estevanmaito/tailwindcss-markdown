@@ -1,11 +1,6 @@
-const sing = () => 'Welcome to the jungle'
+import plugin from 'tailwindcss/plugin'
+import rules from './rules'
 
-const greeting = (name) => `Hello ${name}`
-
-module.exports = {
-  sayHi: 'Hi',
-  sayBye: 'Bye',
-  sayHey: 'sayHey',
-  sing: sing,
-  greeting,
-}
+export default plugin(({ addComponents }) => {
+  addComponents(rules)
+})

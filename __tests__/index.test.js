@@ -1,31 +1,33 @@
-const myLib = require('../src/index')
+import _ from 'lodash'
+import postcss from 'postcss'
+import tailwindcss from 'tailwindcss'
+import plugin from '../src/index'
 
-describe('mylib says', () => {
-  describe('sayHi', () => {
-    it('should be a string', () => {
-      expect(typeof myLib.sayHi).toBe('string')
+const generatePluginCss = (config) => {
+  return postcss(
+    tailwindcss(
+      _.merge(
+        {
+          theme: {},
+          corePlugins: false,
+          plugins: [plugin],
+        },
+        config
+      )
+    )
+  )
+    .process('@tailwind base', {
+      from: undefined,
     })
-
-    it('should return `Hi`', () => {
-      expect(myLib.sayHi).toBe('Hi')
+    .then((result) => {
+      return result.css
     })
-  })
+}
 
-  describe('sayBye', () => {
-    it('should be a string', () => {
-      expect(typeof myLib.sayBye).toBe('string')
-    })
-  })
-
-  describe('sing', () => {
-    it('should return a string', () => {
-      expect(typeof myLib.sing()).toBe('string')
-    })
-  })
-
-  describe('greeting', () => {
-    it('should greeting given a name', () => {
-      expect(myLib.greeting('Estevan')).toBe('Hello Estevan')
+describe('plugin', () => {
+  it('should return exact styles', () => {
+    return generatePluginCss().then((css) => {
+      expect(css).toBeTruthy()
     })
   })
 })
