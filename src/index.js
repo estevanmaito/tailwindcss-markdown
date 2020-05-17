@@ -1,7 +1,7 @@
 module.exports = ({ addComponents }) => {
   addComponents({
     '.markdown': {
-      '@apply text-gray-700 leading-relaxed': {},
+      '@apply text-gray-700 leading-normal': {},
       '> *:first-child': {
         '@apply mt-0': {},
       },
@@ -12,10 +12,10 @@ module.exports = ({ addComponents }) => {
         '@apply mt-4': {},
       },
       '> hr': {
-        '@apply border-t-0 border-r-0 border-l-0 border-b-2 border-gray-200 my-16': {},
+        '@apply border-t-0 border-r-0 border-l-0 border-b-2 border-gray-200 my-8': {},
       },
       '> a, > p a, > ul li a, > ol li a, a&': {
-        '@apply text-blue-500 underline font-medium': {},
+        '@apply text-blue-500 underline font-medium cursor-pointer': {},
         '&:hover': {
           '@apply text-blue-700': {},
         },
@@ -57,7 +57,7 @@ module.exports = ({ addComponents }) => {
         '@apply mt-12 mb-0 text-gray-900 leading-snug font-medium text-lg': {},
       },
       '> h1 + p': {
-        '@apply mt-8': {},
+        '@apply mt-0 mb-4 text-gray-600': {},
       },
       '> h1 > code, > h2 > code, > h3 > code, > h4 > code': {
         '@apply text-purple-600 font-mono': {},
