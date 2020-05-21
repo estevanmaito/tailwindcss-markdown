@@ -7,6 +7,19 @@
   <a href="https://github.com/estevanmaito/tailwindcss-markdown/blob/master/LICENSE"><img src="https://img.shields.io/github/license/estevanmaito/tailwindcss-markdown" alt="MIT License" /></a>
 </p>
 
-A plugin to style Markdown.
+A plugin to style Markdown. Right now it uses the default Tailwind CSS website styles, but it will soon be available as a customizable theme.
+
+## Install
+
+```sh
+npm install tailwindcss-markdown
+```
+
+In `tailwind.config.js`:
 
 `plugin: [require('tailwindcss-markdown')]`
+
+TODO:
+
+- [ ] Customize root element class
+- [ ] Make styles extensible and user configurable
