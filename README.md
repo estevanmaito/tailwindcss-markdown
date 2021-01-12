@@ -19,6 +19,8 @@ In `tailwind.config.js`:
 
 `plugin: [require('tailwindcss-markdown')]`
 
+Then add .markdown class to an element containing markdown to apply the styles.
+
 TODO:
 
 - [ ] Customize root element class

@@ -45,7 +45,7 @@ module.exports = ({ addComponents }) => {
         '@apply mb-1 leading-none text-gray-900 font-medium text-3xl': {},
       },
       '> h2, h2&': {
-        '@apply mt-16 mb-4 text-gray-900 leading-none font-normal text-2xl': {},
+        '@apply mt-12 mb-4 text-gray-900 leading-none font-normal text-2xl': {},
       },
       '> h2 + h3': {
         '@apply mt-6': {},
